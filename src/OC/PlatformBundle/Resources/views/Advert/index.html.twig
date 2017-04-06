@@ -4,12 +4,10 @@
         <title>Bienvenue sur ma première page avec Openclassrooms !</title>
     </head>
     <body>
-    <h1>Hello {{ nom }} et page {{ page }}</h1>
-
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Alias autem corporis eligendi facere facilis inventore magni modi molestiae nobis nulla optio porro praesentium qui,
-        reprehenderit repudiandae saepe totam ut voluptatem!
+        {% for message in app.session.flashbag.get('info') %}
+            <p>Message flash : {{ message }}</p>
+        {% endfor %}
     </p>
     </body>
 </html>
