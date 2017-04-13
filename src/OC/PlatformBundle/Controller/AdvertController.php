@@ -15,6 +15,7 @@ class AdvertController extends Controller
     /**
      * @return Response
      */
+
     public function indexAction()
     {
         $listAdverts = array(
@@ -38,6 +39,11 @@ class AdvertController extends Controller
                 'date'    => new \Datetime())
         );
 
+        $antispam = $this->container->get('oc_platform.antispam');
+        $text = '...';
+        if ($antispam->isSpam($text)) {
+            throw new \Exception('Votre message a été détecté comme spam !');
+        }
         return $this->render('OCPlatformBundle:Advert:index.html.twig', array(
             'listAdverts' => $listAdverts
         ));
