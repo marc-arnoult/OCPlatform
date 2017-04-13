@@ -10,3 +10,4 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 7315fb365bd86549116361b8f37f9d0517fa5efc
+    app_webmaster: marc
