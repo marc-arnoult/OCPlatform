@@ -38,12 +38,6 @@ class AdvertController extends Controller
                 'content' => 'Nous proposons un poste pour webdesigner. Blabla…',
                 'date'    => new \Datetime())
         );
-
-        $antispam = $this->container->get('oc_platform.antispam');
-        $text = '...';
-        if ($antispam->isSpam($text)) {
-            throw new \Exception('Votre message a été détecté comme spam !');
-        }
         return $this->render('OCPlatformBundle:Advert:index.html.twig', array(
             'listAdverts' => $listAdverts
         ));
