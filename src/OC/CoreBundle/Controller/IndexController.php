@@ -9,7 +9,7 @@ class IndexController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CoreBundle:Core:index.html.twig');
+        return $this->render('OCCoreBundle:Core:index.html.twig');
     }
 
     public function contactAction(Request $request)

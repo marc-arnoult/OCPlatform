@@ -4,6 +4,6 @@ namespace OC\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CoreBundle extends Bundle
+class OCCoreBundle extends Bundle
 {
 }
